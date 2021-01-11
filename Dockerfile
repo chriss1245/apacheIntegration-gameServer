@@ -18,7 +18,7 @@ RUN pip3 install -r /var/www/gameServer/gameServer/requirements.txt
 COPY ./gameServer.conf /etc/apache2/sites-available/gameServer.conf
 
 RUN a2ensite gameServer
-RUN a2enmod headers
+RUN a2enmod wsgi
 
 COPY ./gameServer.wsgi /var/www/gameServer/gameServer.wsgi
 COPY ./run.py /var/www/gameServer/run.py
@@ -34,5 +34,5 @@ RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
 EXPOSE 80
 WORKDIR /var/www/gameServer/
 
-CMD /usr/sbin/apache2ctl -D FOREGROUND
+CMD /usr/sbin/apache2ctl start
 
