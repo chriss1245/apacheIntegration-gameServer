@@ -4,7 +4,7 @@ FROM ubuntu
 
 # libraries
 RUN apt-get update
-RUN apt-get install python3
+
 RUN apt-get install python3-pip
 RUN apt-get install apache2
 RUN apt-get install libapache2-mod-wsgi
