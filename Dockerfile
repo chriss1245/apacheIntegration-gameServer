@@ -15,7 +15,7 @@ COPY ./gameServer/requirements.txt /var/www/gameServer/gameServer/requirements.t
 RUN pip3 install -r /var/www/gameServer/gameServer/requirements.txt
 
 # setting up apache
-COPY ./gameserver.conf /etc/apache2/sites-available/gameServer.conf
+COPY ./gameServer.conf /etc/apache2/sites-available/gameServer.conf
 
 RUN a2ensite gameServer
 RUN a2enmod headers
