@@ -34,5 +34,5 @@ RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
 EXPOSE 80
 WORKDIR /var/www/gameServer/
 
-CMD /usr/sbin/apache2ctl -D FOREGROUND
+CMD /usr/sbin/apache2ctl start
 
