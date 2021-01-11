@@ -4,10 +4,10 @@ FROM ubuntu
 
 # libraries
 RUN apt-get update
-
-RUN apt-get install python3-pip
-RUN apt-get install apache2
-RUN apt-get install libapache2-mod-wsgi
+RUN apt-get -y install python3
+RUN apt-get -y install python3-pip
+RUN apt-get -y install apache2
+RUN apt-get -y install libapache2-mod-wsgi
 
 # dependencies of gamesever
 COPY ./gameServer/requirements.txt /var/www/gameServer/gameServer/requirements.txt
