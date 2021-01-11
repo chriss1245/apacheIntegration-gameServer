@@ -1,5 +1,7 @@
 #! /usr/bin/python3
 
-from app import app as application
+
 import sys
 sys.path.append('/var/www/gameServer')
+sys.path.append('var/www/gameServer/gameServer')
+from gameServer import app as application
