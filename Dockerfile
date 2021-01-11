@@ -12,7 +12,7 @@ RUN apt-get -y install libapache2-mod-wsgi
 
 # dependencies of gamesever
 COPY ./gameServer/requirements.txt /var/www/gameServer/gameServer/requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /var/www/gameServer/gameServer/requirements.txt
 
 # setting up apache
 COPY ./gameserver.conf /etc/apache2/sites-available/gameServer.conf
